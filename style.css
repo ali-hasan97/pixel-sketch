@@ -9,15 +9,14 @@ h1 {
     text-align: center;
 }
 
-#sketch {
+#grid {
     height: 600px;
     width: 600px;
     align-self: center;
     display: grid;
-    grid-template-columns: repeat(100, 1%);
     background-color: white;
 }
 
 .c16x16 {
-
+    /* border: 1px solid black; */
 }
