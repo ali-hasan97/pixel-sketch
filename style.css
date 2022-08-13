@@ -1,12 +1,65 @@
+
+
 body {
-display: flex;
-flex-direction: column;
-background-color: rgb(141, 141, 141);
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(141, 141, 141);
+    margin: 0px;
+    min-height: 100vh;
 }
 
 h1 {
-    flex: 1;
     text-align: center;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    margin-left: -150px;
+}
+
+#configs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 20px;
+    align-items: center;
+    padding-right: 50px;
+    margin-top: 40px;
+}
+
+/* config icons */
+
+#draw {
+    color: rgb(0, 0, 99);
+}
+
+#eraser {
+    color: rgb(255, 133, 153);
+}
+
+#lighten {
+    color: rgb(255, 208, 0);
+}
+
+#darken {
+    color: rgb(218, 218, 218)
+}
+
+.rainbow {
+    background-image: linear-gradient(to bottom, violet, indigo, blue, green, yellow, orange, red);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+#clear {
+    color: rgba(255, 0, 0, 0.801);
+}
+
+/* end config icons */
+
+#grid-container {
+
 }
 
 #grid {
@@ -17,6 +70,64 @@ h1 {
     background-color: white;
 }
 
-.c16x16 {
-    /* border: 1px solid black; */
+.cell {
+    border: 1px solid rgb(248, 248, 248);
+}
+
+#sizeValue {
+    padding-top: 10px;
+}
+
+#sizeSlider {
+    width: 600px;
+}
+
+button,
+i,
+input[type='color'] {
+  transition: transform 0.1s ease-in-out;
+}
+
+button:hover,
+i:hover,
+input[type='color']:hover {
+  transform: scale(1.05);
+}
+
+input[type='color']:active {
+  transition: transform 0.05s ease-in-out;
+  transform: scale(1);
+}
+
+input[type='color'] {
+  -webkit-appearance: none;
+  width: 80px;
+  height: 80px;
+  border: none;
+  background-color: rgb(141, 141, 141);
+}
+
+input[type='color']::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+input[type='color']::-webkit-color-swatch {
+  border: none;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    background-color: #1f2937;
+    align-items: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 80px;
+    margin-top: auto;
+}
+
+.footer i {
+    padding: 20px;
 }

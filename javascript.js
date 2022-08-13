@@ -1,6 +1,6 @@
 let grid=document.querySelector('#grid');
-const default_size = 16;
 
+const default_size = 30;
 let size = default_size;
 const sizeSlider = document.querySelector('#sizeSlider');
 const sizeValue = document.querySelector('#sizeValue');
@@ -10,6 +10,7 @@ let colorValue = '#000000';
 
 const eraser = document.querySelector('#eraser');
 const draw = document.querySelector('#draw');
+const clear = document.querySelector('#clear');
 
 // grid initial setup
 function createGrid(size) {
@@ -19,7 +20,7 @@ function createGrid(size) {
 
     for (let i = 0; i < (size*size); i++) {
         let cell=document.createElement('div');
-        cell.classList.add('c16x16');
+        cell.classList.add('cell');
         cell.addEventListener('mouseover', setColor);
         cell.addEventListener('mousedown', setColor);
         cell.addEventListener('click', setColorClick);
@@ -33,6 +34,10 @@ eraser.onclick = () => (setNewColor('white'));
 
 // draw mode
 draw.onclick = () => (setNewColor(colorSelector.value));
+
+// rainbow mode
+
+
 
 // set color of a cell
 let mousedown = false;
@@ -57,13 +62,15 @@ function setColorClick() {
 }
 
 
-// grid resizing
+// grid resizing and clear
 sizeSlider.onchange = (e) => resizeGrid(e.target.value);
+clear.onclick = () => resizeGrid(size);
 
-function resizeGrid(size) {
-    sizeValueUpdate(size);
+function resizeGrid(newSize) {
+    size = newSize;
+    sizeValueUpdate(newSize);
     eraseGrid();
-    createGrid(size);
+    createGrid(newSize);
     setNewColor(colorSelector.value);
 }
 
