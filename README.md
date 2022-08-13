@@ -1,3 +1,5 @@
+#Pixel Sketch
+
 Use this [in-browser sketching canvas](https://ali-hasan97.github.io/pixel-sketch/) to create some amazing pixelated art! It has several cool tools like a rainbow mode as well as the ability to darken/lighten pieces of your drawing. It's a fun little place worth spending a few minutes to play around in.
 
 Features:
