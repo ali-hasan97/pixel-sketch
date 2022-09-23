@@ -11,3 +11,5 @@ Features:
 - Clear the page when the drawing is beyond saving. :cry:
 
 Pixel Sketch was created using HTML, CSS, and vanilla Javascript.
+
+![image](https://user-images.githubusercontent.com/77036553/191940214-b5710582-0542-4de5-bfd5-77e540ff93bb.png)
